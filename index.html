@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 <header class="page-header">
@@ -13,9 +14,9 @@
     </a>
 
     <ul class="navigation-list">
-      <li class="navigation-item"><a>Главная</a></li>
+      <li><a class="navigation-link" href="#">Главная</a></li>
       <li><a class="navigation-link" href="#">О Седоне</a></li>
-      <li><a href="catalog.html">Гостиницы</a></li>
+      <li><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
     </ul>
     <ul class="navigation-list navigation-user">
       <li class="navigation-item">
@@ -32,7 +33,7 @@
                   </span>
         </a>
       </li>
-      <li class="navigation-item">
+      <li class="navigation-item navigation-user-button">
         <a class="navigation-link" href="#">
           Хочу сюда!
         </a>
@@ -43,9 +44,9 @@
 <main class="main-index">
 
   <h1 class="visually-hidden">Город Седона</h1>
-  <div>
+  <div class="index-image">
     <span class="visually-hidden"></span>
-    <img src="images/welcome.svg" width="458" height="352" alt="Приветствующее изображение в город Седона.">
+    <img class="index-image" src="images/welcome.svg" width="458" height="352" alt="Приветствующее изображение в город Седона.">
   </div>
   <section class="advantages">
     <h2 class="visually-hidden">Преимущества</h2>
@@ -77,8 +78,8 @@
     </ul>
   </section>
   <section class="services">
-    <h3 class="service-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
-    <p class="service-description">Опытный персонал и качественное обслуживание!</p>
+    <h3 class="services-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
+    <p class="services-description">Опытный персонал и качественное обслуживание!</p>
     <ul class="service-list">
       <li class="service-item">
         <h3 class="service-title">Жилье</h3>
@@ -105,10 +106,10 @@
   <section class="newsletter">
     <h2 class="visually-hidden">Подписка на рассылку</h2>
     <p class="newsletter-title">Подпишитесь на рассылку</p>
-    <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-      <input type="email" name="email" placeholder="Ваш e-mail">
-      <button class="button" type="submit">Записаться</button>
+      <input class="newsletter-form element" type="email" name="email" placeholder="Ваш e-mail">
+      <button class="newsletter-form button" type="submit">Подписаться</button>
     </form>
   </section>
 </main>
