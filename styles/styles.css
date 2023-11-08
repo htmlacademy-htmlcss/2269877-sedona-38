@@ -73,7 +73,9 @@ body {
 
 .navigation {
   display: flex;
-  min-width: 1200px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  height: 64px;
   margin: 0 auto;
 }
 
@@ -83,38 +85,79 @@ body {
   height: 70px;
 }
 
+.navigation-logo {
+
+  position: relative;
+  z-index: 1;
+  margin-right: 30px;
+}
+
 .navigation-list {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  margin: 0 auto 0 168px;
-  padding: 20px 0;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
 .navigation-link {
-  display: block;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   position: relative;
-  padding: 0 16px;
+  display: block;
+  padding: 20px 16px;
   text-align: center;
   text-decoration: none;
   color: inherit;
 }
 
+.navigation-link:hover {
+  border-bottom: 2px solid rgba(117, 98, 87, 1);
+}
+
+.navigation-link-selected {
+  box-sizing: border-box;
+}
+
+.navigation-link-icon {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.navigation-user {
+  margin-left: 285px;
+}
+
+.navigation-link-icon-like {
+  position: relative;
+}
+
+.like-number {
+  font-size: 10px;
+  position: absolute;
+  top: 11px;
+  right: 1px;
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #7DB54F;
+}
 
 .navigation-user-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 160px;
   height: 36px;
+  margin-left: 14px;
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 4px;
   background: #756157;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .main-index {
@@ -122,10 +165,14 @@ body {
   background-color: #ffffff;
 }
 
+
 .top-block {
+  padding-top: 51px;
+  padding-bottom: 82px;
   background-image: url("../images/index-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center bottom -1px;
+  background-size: 100%, cover;
 }
 
 .image-block {
@@ -275,6 +322,12 @@ body {
 
 .service-item {
   padding: 80px 85px;
+}
+
+.service-icon {
+  width: 75px;
+  height: 72px;
+  padding: 0px 85px;
 }
 
 .service-title {
@@ -548,6 +601,27 @@ body {
 
 .social-icons {
   display: flex;
+  flex-wrap: wrap;
+  min-width: 142px;
+  gap: 10px;
+}
+
+.social-icons-vk {
+  width: 24px;
+  height: 14px;
+  padding: 0 10px;
+}
+
+.social-icons-telegram {
+  width: 18px;
+  height: 16px;
+  padding: 1px 10px;
+}
+
+.social-icons-youtube {
+  width: 22px;
+  height: 17px;
+  padding-left: 10px;
 }
 
 .footer-contacts {
@@ -685,6 +759,10 @@ body {
   color: rgba(255, 255, 255, 1);
   border-radius: 4px;
   background: #82b3d3;
+}
+
+.hotel-favorite-button-green {
+  background: rgba(125, 181, 79, 1);
 }
 
 .hotel-rating {
@@ -875,6 +953,15 @@ body {
 
 .catalog-products {
   display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .catalog-filter {
@@ -885,8 +972,75 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  text-align: left;
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
   color: rgba(255, 255, 255, 1);
+}
+
+.price-group-inputs {
+  display: flex;
+  margin-bottom: 44px;
+  gap: 2px;
+}
+
+.price-container {
+  position: relative;
+  width: 143px;
+}
+
+.input-field {
+  border-radius: 4px 0 0 4px;
+}
+
+.price-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  padding-right: 45px;
+  border: none;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  margin: 0;
+  margin-right: 20px;
+  opacity: 0.3;
+  color: #000000;
+}
+
+.price-group-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.price-range-bar {
+  position: absolute;
+  width: 206px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.price-range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .facilities, .property-type {
