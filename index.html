@@ -5,6 +5,8 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>HTML Academy: Седона</title>
   <link href="styles/styles.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 <div class="page-container">
@@ -15,20 +17,20 @@
       </a>
 
       <ul class="navigation-list">
-        <li><a class="navigation-link navigation-link-menu navigation-link-selected" href="#">Главная</a></li>
-        <li><a class="navigation-link navigation-link-menu" href="#">О Седоне</a></li>
-        <li><a class="navigation-link navigation-link-menu" href="catalog.html">Гостиницы</a></li>
+        <li><a class="navigation-link navigation-link-menu navigation-link-event navigation-link-selected" href="#">Главная</a></li>
+        <li><a class="navigation-link navigation-link-menu navigation-link-event" href="#">О Седоне</a></li>
+        <li><a class="navigation-link navigation-link-menu navigation-link-event" href="catalog.html">Гостиницы</a></li>
       </ul>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-icon navigation-link-icon-search" href="#">
+          <a class="navigation-link navigation-link-icon navigation-link-icon-search navigation-link-event" href="#">
                     <span class="visually-hidden">
                       Поиск
                     </span>
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-icon navigation-link-icon-like" href="#">
+          <a class="navigation-link navigation-link-icon navigation-link-icon-like navigation-link-event" href="#">
                   <span class="visually-hidden">
                     Лайк
                   </span>
@@ -58,34 +60,34 @@
       </div>
       <ul class="advantages-list list">
         <li class="advantages-item advantages-item-accent background-blue">
-          <div class="advantages-item-container">
+          <div class="advantages-item-container advantages-accent-item-container">
             <h3 class="advantages-title advantages-title-accent">Настоящий городок</h3>
             <p class="advantages-description advantages-description-accent">Седона — не аттракцион для туристов, там
               течёт своя жизнь</p>
           </div>
-          <img alt="Изображение города Седона" class="advantages-image" height="385" src="images/photo-1.jpg"
+          <img class="advantages-image" alt="Изображение города Седона" class="advantages-image" height="385" src="images/photo-1.jpg"
                width="800"/>
         </li>
         <li class="advantages-item background">
-          <div class="advantages-item-container">
+          <div class="advantages-item-container advantages-item-wrap">
             <h3 class="advantages-title">Небольшая площадь</h3>
             <p class="advantages-description">Все достопримечательности находятся очень близко</p>
           </div>
         </li>
         <li class="advantages-item background-light-blue">
-          <div class="advantages-item-container">
+          <div class="advantages-item-container advantages-item-wrap">
             <h3 class="advantages-title">Красивая<br>дорога</h3>
             <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
         </li>
         <li class="advantages-item background">
-          <div class="advantages-item-container">
+          <div class="advantages-item-container advantages-item-wrap">
             <h3 class="advantages-title">Мало<br>туристов</h3>
             <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
           </div>
         </li>
         <li class="advantages-item advantages-item-accent advantages-item-accent-reverse background-blue">
-          <div class="advantages-item-container">
+          <div class="advantages-item-container advantages-accent-item-container">
             <h3 class="advantages-title advantages-title-accent">Там есть<br>мост дьявола</h3>
             <p class="advantages-description advantages-description-accent">Да, по нему можно пройти! Если вы
               осмелитесь, разумеется</p>
@@ -130,7 +132,7 @@
       <p class="newsletter-title">Подпишитесь на рассылку</p>
       <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form action="https://echo.htmlacademy.ru/" class="newsletter-form" method="post">
-        <input class="newsletter-form news-letter-form-input" name="email" placeholder="Ваш e-mail" type="email">
+        <input class="newsletter-form news-letter-form-input" name="email" placeholder="Ваш e-mail" type="email" required>
         <button class="newsletter-form button" type="submit">Подписаться</button>
       </form>
     </section>
@@ -138,78 +140,98 @@
   <footer class="page-footer" data-test="footer">
     <h2 class="visually-hidden">Контактная информация</h2>
     <ul class="social-list list">
-      <li><a class="social-link social-icons-vk" href="https://vk.com/htmlacademy"></a></li>
-      <li><a class="social-link social-icons-telegram" href="https://t.me/htmlacademy"></a></li>
-      <li><a class="social-link social-icons-youtube" href="#"></a></li>
+      <li><a class="social-link social-icons-vk" href="https://vk.com/htmlacademy"><span class="visually-hidden">Наш сайт во ВКонтакте.</span></a></li>
+      <li><a class="social-link social-icons-telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Наш сайт в Телеграмме.</span></a></li>
+      <li><a class="social-link social-icons-youtube" href="#"><span class="visually-hidden">Мы на YouTube.</span></a></li>
     </ul>
     <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
     <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img alt="Логотип html-академии"
                                                                     class="htmlacademy-logo" height="33"
-                                                                    src="images/logo-htmlacademy.svg" width="115"></a>
+                                                                    src="images/logo-htmlacademy.svg" width="115">
+      <span class="visually-hidden">Сделано в HTML Academy.</span></a>
   </footer>
   <!--модальное окно и замутнение  в верстке-->
-  <div class="overlay modal-container-close">
-    <span class="visually-hidden">Модальное окно бронирования</span>
-    <form action="https://echo.htmlacademy.ru/" class="modal modal-container-close" method="get">
-      <button class="modal-close" type="button">
-        <span class="visually-hidden">Закрыть модальное окно</span>
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-search" data-test="modal">
+      <button class="modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть.</span>
       </button>
-      <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-      <div class="modal-fields">
-        <div class="modal-field-wrapper">
-          <label class="modal-input-label" for="checkin">Дата заезда:</label>
-          <div>
-            <input class="modal-input modal-input-wide" id="checkin" name="date-checkin" required
-                   type="text" value="27 апреля 2020">
-            <span class="search-message search-message-error">Мы не можем отправить вас в прошлое.</span>
-          </div>
-        </div>
-        <div class="modal-field-wrapper">
-          <label class="modal-input-label" for="checkout">Дата выезда:</label>
-          <div>
-            <input class="modal-input modal-input-wide" id="checkout" name="date-checkout" required
-                   type="text" value="1 сентября 2023">
-            <span class="search-message">На эти даты есть свободные номера. Пока есть.</span>
-          </div>
-        </div>
-        <div class="modal-fields-number">
-          <div class="modal-field-wrapper modal-field-wrapper-small">
-            <label class="modal-input-label" for="adults">Взрослые:</label>
-            <div class="input-controls">
-              <input class="modal-input modal-input-number" id="adults" required type="text" value="2">
-              <button class="input-control input-control-minus" type="button">
-                <span class="visually-hidden">Уменьшить количество взрослых</span>
-              </button>
-              <button class="input-control input-control-plus" type="button">
-                <span class="visually-hidden">Увеличить количество взрослых</span>
-              </button>
+      <section class="modal-content">
+        <h2 class="modal-title headline">Поиск гостиницы в Седоне</h2>
+        <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="modal-date-search-group check-in-group">
+            <label class="modal-search-group-title" for="check-in-date">Дата заезда:</label>
+            <div class="modal-input-container">
+              <input class="input-field modal-search-input" type="text" name="check-in-date"
+                     placeholder="27 апреля 2020" id="check-in-date" required>
             </div>
+            <span class="legend-text error-message">Мы не можем отправить вас в прошлое.</span>
           </div>
-          <div class="modal-field-wrapper modal-field-wrapper-small">
-            <label class="modal-input-label" for="children">Дети:</label>
-            <span class="tooltip">
-                      <button aria-labelledby="tooltip-label-child" class="tooltip-toggle" type="button"></button>
+          <div class="modal-date-search-group check-out-group">
+            <label class="modal-search-group-title" for="check-out-date">Дата выезда:</label>
+            <div class="modal-input-container">
+              <input class="input-field modal-search-input" type="text" name="check-out-date"
+                     placeholder="1 сентября 2023" id="check-out-date" required>
+            </div>
+            <span class="legend-text">На эти даты есть свободные номера. Пока есть.</span>
+          </div>
+          <div class="people-amount-count">
+            <div class="people-amount-count-container adult-count">
+              <label class="modal-search-group-title adult-amount-title" for="adult-amount">Взрослые:</label>
+              <div class="people-amount">
+                <button class="people-amount-button people-amount-decrease" type="button">
+                  <span class="visually-hidden">Уменьшить количество взрослых.</span>
+                  <svg class="decrease-icon" width="14" height="2" viewBox="0 0 14 2" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 2L14 2V0L0 0Z" />
+                  </svg>
+                </button>
+                <input class="input-field people-amount-input" type="text" name="adult-amount" placeholder="2"
+                       id="adult-amount" required>
+                <button class="people-amount-button people-amount-increase" type="button">
+                  <span class="visually-hidden">Увеличить количество взрослых.</span>
+                  <svg class="increase-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="people-amount-count-container child-count">
+                  <span class="form-label-icon">
+                    <label class="modal-search-group-title child-amount-title" for="child-amount">Дети:</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-child"></button>
                       <span class="tooltip-text" role="tooltip" id="tooltip-label-child">
                         Укажите количество детей, которые будут с вами, возраст которых
                         от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
                       </span>
-            </span>
-            <div class="input-controls">
-              <input class="modal-input modal-input-number" id="children" type="text" value="2">
-              <button class="input-control input-control-minus" type="button">
-                <span class="visually-hidden">Уменьшить количество детей</span>
-              </button>
-              <button class="input-control input-control-plus" type="button">
-                <span class="visually-hidden">Увеличить количество детей</span>
-              </button>
+                    </span>
+                  </span>
+              <div class="people-amount">
+                <button class="people-amount-button people-amount-decrease" type="button">
+                  <span class="visually-hidden">Уменьшить количество детей.</span>
+                  <svg class="decrease-icon" width="14" height="2" viewBox="0 0 14 2" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 2L14 2V0L0 0Z" />
+                  </svg>
+                </button>
+                <input class="input-field people-amount-input" type="text" name="child-amount" placeholder="2"
+                       id="child-amount">
+                <button class="people-amount-button people-amount-increase" type="button">
+                  <span class="visually-hidden">Увеличить количество детей.</span>
+                  <svg class="increase-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-
-        </div>
-      </div>
-
-      <button class="modal-button" type="submit">Найти</button>
-    </form>
+          <button class="button find-button" type="submit">Найти</button>
+        </form>
+      </section>
+    </div>
   </div>
 </div>
 </body>

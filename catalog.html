@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>Каталог</title>
   <link href="styles/styles.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 <div class="page-container">
@@ -14,20 +16,20 @@
       </a>
 
       <ul class="navigation-list">
-        <li><a class="navigation-link navigation-link-menu" href="index.html">Главная</a></li>
-        <li><a class="navigation-link navigation-link-menu" href="#">О Седоне</a></li>
-        <li><a class="navigation-link navigation-link-menu navigation-link-selected" href="catalog.html">Гостиницы</a></li>
+        <li><a class="navigation-link navigation-link-menu navigation-link-event" href="index.html">Главная</a></li>
+        <li><a class="navigation-link navigation-link-menu navigation-link-event" href="#">О Седоне</a></li>
+        <li><a class="navigation-link navigation-link-menu navigation-link-selected navigation-link-event" href="catalog.html">Гостиницы</a></li>
       </ul>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-icon navigation-link-icon-search" href="#">
+          <a class="navigation-link navigation-link-icon navigation-link-icon-search navigation-link-event" href="#">
                     <span class="visually-hidden">
                       Поиск
                     </span>
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-icon navigation-link-icon-like" href="#">
+          <a class="navigation-link navigation-link-icon navigation-link-icon-like navigation-link-event" href="#">
                   <span class="visually-hidden">
                     Лайк
                   </span>
@@ -151,9 +153,9 @@
         <p class="catalog-search-description">Найдено гостиниц: <span class="hotel-count">38</span></p>
         <div class="sorting-container">
           <select aria-label="Сортировка" class="select-control">
-            <option class="select-control-text" value="popular">Сначала популярное</option>
-            <option class="select-control-text" value="cheap">Сначала дешёвое</option>
-            <option class="select-control-text" value="expensive">Сначала дорогое</option>
+            <option class="select-control-text" value="popular">Сначала популярные</option>
+            <option class="select-control-text" value="cheap">Сначала дешёвые</option>
+            <option class="select-control-text" value="expensive">Сначала дорогие</option>
           </select>
         </div>
         <ul class="view-filter-list">
@@ -216,7 +218,7 @@
             <div class="hotel-catalog-buttons">
               <a class="catalog-button hotel-more-link" href="#">Подробнее</a>
               <button class="catalog-button hotel-favorite-button hotel-favorite-button-green" type="button">В
-                избранное
+                избранном
               </button>
             </div>
             <div class="hotel-ratings">
@@ -308,7 +310,7 @@
       <p class="newsletter-description newsletter-description-dark">Только полезная информация и никакого спама, честное
         бойскаутское!</p>
       <form action="https://echo.htmlacademy.ru/" class="newsletter-form" method="post">
-        <input class="newsletter-form news-letter-form-input" name="email" placeholder="Ваш e-mail" type="email">
+        <input class="newsletter-form news-letter-form-input" name="email" placeholder="Ваш e-mail" type="email" required>
         <button class="newsletter-form button" type="submit">Подписаться</button>
       </form>
     </section>
@@ -316,14 +318,15 @@
   <footer class="page-footer" data-test="footer">
     <h2 class="visually-hidden">Контактная информация</h2>
     <ul class="social-list list">
-      <li><a class="social-link social-icons-vk" href="https://vk.com/htmlacademy"></a></li>
-      <li><a class="social-link social-icons-telegram" href="https://t.me/htmlacademy"></a></li>
-      <li><a class="social-link social-icons-youtube" href="https://www.youtube.com/user/htmlacademyru"></a></li>
+      <li><a class="social-link social-icons-vk" href="https://vk.com/htmlacademy"><span class="visually-hidden">Наш сайт во ВКонтакте.</span></a></li>
+      <li><a class="social-link social-icons-telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Наш сайт в Телеграмме.</span></a></li>
+      <li><a class="social-link social-icons-youtube" href="#"><span class="visually-hidden">Мы на YouTube.</span></a></li>
     </ul>
     <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
     <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img alt="Логотип html-академии"
                                                                     class="htmlacademy-logo" height="33"
-                                                                    src="images/logo-htmlacademy.svg" width="115"></a>
+                                                                    src="images/logo-htmlacademy.svg" width="115">
+      <span class="visually-hidden">Сделано в HTML Academy.</span></a>
   </footer>
 </div>
 </body>
