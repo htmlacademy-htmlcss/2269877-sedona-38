@@ -1584,21 +1584,20 @@ html {
   position: relative;
   margin: auto;
   padding: 64px 70px;
-  border-radius: 30px;
   background-color: #ffffff;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
 }
-
-.modal-title {
+.modal-title{
+  text-transform: uppercase;
   font-family: inherit;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-align: left;
-  text-transform: uppercase;
   color: #000000;
-}
 
+}
 .modal-search {
   width: 577px;
 }
@@ -1609,18 +1608,18 @@ html {
 
 .modal-close-button {
   position: absolute;
-  top: 88px;
+  padding: 0;
+  top: 64px;
   right: 52px;
   width: 52px;
   height: 52px;
-  padding: 0;
-  cursor: pointer;
   border: none;
   border-radius: 50%;
-  background-color: #f2f2f2;
   background-image: url("../icons/close.svg");
+  background-color: #f2f2f2;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .modal-close-button:hover {
@@ -1631,30 +1630,28 @@ html {
   opacity: 0.3;
 }
 
+.modal-container-close {
+  display: none;
+}
 
 .modal-date-search-group {
   display: grid;
-  margin-bottom: 23px;
   grid-template-areas:
     "title input"
     ". legend";
   grid-template-columns: 1fr 440px;
   column-gap: 10px;
   row-gap: 4px;
+  margin-bottom: 23px;
 }
 
 .modal-search-input {
-  font-family: inherit;
-  font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
+  padding: 12px 20px;
+  padding-right: 60px;
+  border-radius: 4px;
   box-sizing: border-box;
   width: 100%;
-  padding: 12px 60px 12px 20px;
-  text-align: left;
-  color: #000000;
-  border-radius: 4px;
-
 }
 
 .modal-input-container {
@@ -1664,26 +1661,26 @@ html {
 
 .modal-input-container::before {
   position: absolute;
-  top: 24px;
-  right: 20px;
   width: 20px;
   height: 20px;
-  content: "";
-  transform: translateY(-50%);
-  opacity: 0.3;
   background-image: url("../icons/date.svg");
   background-repeat: no-repeat;
   background-position: center;
+  content: "";
+  right: 20px;
+  opacity: 0.3;
+  top: 24px;
+  transform: translateY(-50%);
 }
 
 .modal-search-group-title {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  align-self: center;
-  margin: 0;
-  text-transform: capitalize;
   color: #000000;
+  text-transform: capitalize;
+  margin: 0;
+  align-self: center;
   grid-area: title;
 }
 
@@ -1716,8 +1713,8 @@ html {
 }
 
 .child-count {
-  justify-content: space-between;
   width: 242px;
+  justify-content: space-between;
 }
 
 .people-amount {
@@ -1727,19 +1724,19 @@ html {
 }
 
 .people-amount-input {
-  font-weight: 700;
-  line-height: 20px;
   width: 11px;
   padding: 14px 10px;
   background-color: #f2f2f2;
+  font-weight: 700;
+  line-height: 20px;
 }
 
 .people-amount-button {
+  border: none;
+  background-color: #f2f2f2;
   width: 40px;
   padding: 14px 10px;
   cursor: pointer;
-  border: none;
-  background-color: #f2f2f2;
 }
 
 .people-amount-decrease {
@@ -1756,9 +1753,9 @@ html {
 
 .decrease-icon,
 .increase-icon {
-  vertical-align: middle;
   fill: #756157;
   fill-opacity: 0.3;
+  vertical-align: middle;
 }
 
 .people-amount-decrease:hover .decrease-icon,
@@ -1787,67 +1784,73 @@ html {
 }
 
 .tooltip-toggle {
-  display: block;
   width: 26px;
   height: 26px;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
+  background-color: #83b3d3;
   border: none;
   border-radius: 50%;
-  background-color: #83b3d3;
+  padding: 0;
+  margin: 0;
+  display: block;
   background-image: url("../icons/info-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .tooltip-text {
-  font-size: 16px;
-  line-height: 20px;
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  display: none;
-  width: 216px;
-  padding: 20px 18px 22px 22px;
-  transform: translateX(-50%);
-  color: #ffffff;
-  border-radius: 10px;
   background-color: #333333;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px 18px 22px 22px;
+  border-radius: 10px;
+  width: 216px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+  display: none;
 }
 
 .tooltip-text::after {
-  position: absolute;
-  right: 0;
-  bottom: 100%;
-  left: 0;
-  width: 19px;
-  height: 9px;
-  margin-right: auto;
-  margin-left: auto;
   content: "";
   background-image: url("../icons/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tooltip-toggle:hover {
   background-color: #68a2ca;
 }
 
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
 
 .find-button {
   font-family: inherit;
   font-size: 20px;
+  font-weight: 700;
   line-height: 24px;
+  text-align: center;
+  background-color: #82b3d3;
+  border-radius: 10px;
+  border: none;
+  margin: 0;
+  width: 577px;
+  padding: 18px;
   display: flex;
   justify-content: center;
-  width: 577px;
-  margin: 0;
-  padding: 18px;
   text-transform: uppercase;
-  border: none;
-  border-radius: 10px;
-  background-color: #82b3d3;
 }
 
 .find-button:hover {
