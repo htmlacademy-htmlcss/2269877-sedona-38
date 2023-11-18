@@ -55,10 +55,6 @@ body {
   color: #ffffff;
 }
 
-.button:active {
-  background-color: #756157;;
-}
-
 .button:hover {
   background-color: #68a2ca;
 }
@@ -240,13 +236,6 @@ body {
   background-color: #756157;
 }
 
-.navigation-user-button:active {
-  background-color: #756157;
-}
-
-.navigation-user-button:hover {
-  background-color: #615048;
-}
 
 .navigation-user-like {
   font-size: 16px;
@@ -254,9 +243,13 @@ body {
   line-height: 24px;
   padding: 8px 34px;
   text-align: center;
+  color: #ffffff;
   border: none;
 }
 
+.navigation-user-button:hover {
+  background-color: #615048;
+}
 
 .navigation-user-like:focus-visible,
 .button-search:focus-visible,
@@ -399,7 +392,6 @@ body {
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -432,8 +424,8 @@ body {
 }
 
 .service-item {
-  width: 400px;
-  padding: 51px 77px;
+  width: 230px;
+  padding: 80px 85px;
 }
 
 .service-home {
@@ -601,7 +593,10 @@ html {
 
 .service-list {
   display: flex;
+  flex-wrap: wrap;
   min-height: 385px;
+  margin: 0;
+  padding: 0;
 }
 
 .service-title {
@@ -694,7 +689,7 @@ html {
   position: relative;
   width: 292px;
   margin-top: -6px;
-  margin-right: 50px;
+  margin-right: 69px;
   padding: 12px 18px;
   padding-right: 40px;
   cursor: pointer;
@@ -777,9 +772,6 @@ html {
   background-color: #756157;
 }
 
-.hotel-more-link:active {
-  background-color: #756157;
-}
 
 .hotel-more-link:hover {
   background-color: #615048;
@@ -791,9 +783,6 @@ html {
   background-color: #82b3d3;
 }
 
-.hotel-favorite-button:active {
-  background-color: #82b3d3;
-}
 
 .hotel-favorite-button:hover {
   background-color: #68a2ca;
@@ -899,13 +888,8 @@ html {
   background-color: #68a2ca;
 }
 
-.pagination-link:active {
-  color: #000000;
-  background-color: #f2f2f2;
-}
-
 .pagination-link:hover {
-  opacity: 0.7;
+  background-color: rgba(130, 179, 211, 1);
 }
 
 .pagination-link-current {
@@ -926,14 +910,24 @@ html {
   color: #333333;
 }
 
-
-/*Поведение голубых кнопок*/
 .button:focus-visible,
 .hotel-favorite-button:focus-visible,
 .submit-button:focus-visible,
 .find-button:focus-visible {
   outline: none;
   background-color: #68a2ca;
+}
+
+.navigation-user-like:active,
+.button:active,
+.hotel-favorite-button:active,
+.submit-button:active,
+.find-button:active,
+.hotel-more-link:active,
+.hotel-favorite-button:active,
+.pagination-link:active,
+.reset-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-search {
@@ -945,10 +939,6 @@ html {
   border-radius: 4px;
   background-color: #756157;
   gap: 10px;
-}
-
-.button-search:active {
-  background-color: #756157;
 }
 
 .button-search:hover {
@@ -1035,6 +1025,9 @@ html {
   background-color: #e6e6e6;
 }
 
+.newsletter-button-event:active {
+  color: rgba(255, 255, 255, 0.3);
+}
 
 .inner-header-title {
   font-size: 32px;
@@ -1173,6 +1166,14 @@ html {
   border: none;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 1);
+}
+
+.price-range-toggle:hover {
+  box-shadow: 0 5px 10px #333333;
+}
+
+.price-range-toggle:active {
+  border: 2px solid #82b3d3;
 }
 
 .toggle-min {
@@ -1331,9 +1332,6 @@ html {
   background: transparent;
 }
 
-.reset-button:active {
-  opacity: 1;
-}
 
 .reset-button:hover {
   opacity: 0.3;
@@ -1355,59 +1353,48 @@ html {
   background-color: #ffffff;
 }
 
-/* Light */
-.view-filter-list {
+.view-buttons-list {
   display: flex;
   flex-wrap: wrap;
-  width: 180px;
+  max-width: 170px;
   margin: 0;
   padding: 0;
-  color: #242424;
-  background-color: #ffffff;
-  gap: 10px;
+  list-style: none;
+  gap: 8px;
 }
 
-.view-filter-link {
+.filter-button {
   display: block;
-  width: 48px;
-  height: 48px;
+  min-width: 20px;
+  min-height: 16px;
+  margin-top: -5px;
+  padding: 14px 12px;
+  text-decoration: none;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.view-filter-link::before {
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  content: "";
+.filter-button:hover {
+  border: 2px solid #000000;
 }
 
-.view-filter-link-tile {
-  position: relative;
-  padding-left: 16px;
-}
-
-.view-filter-link-tile::before {
+.view-tile {
   background-image: url("../icons/view-tile.svg");
-  background-repeat: repeat;
-
 }
 
-.view-filter-link-slide-show {
-  position: relative;
+.view-slideshow {
+  background-image: url("../icons/view-slideshow.svg");
 }
 
-.view-filter-link-slide-show::before {
-  background-image: url("../icons/view-slide-show.svg");
-  background-repeat: repeat;
-}
-
-.view-filter-link-list {
-  position: relative;
-  padding-top: 0;
-}
-
-.view-filter-link-list::before {
+.view-list {
   background-image: url("../icons/view-list.svg");
-  background-repeat: repeat;
+}
+
+.current-filter-button {
+  border: 2px solid #000000;
 }
 
 .catalog-wrapper {
@@ -1487,22 +1474,22 @@ html {
 
 
 .page-footer {
-  padding: 40px 70px 30px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
+  padding: 40px 70px 30px;
 }
 
 .footer-phone-link {
   font-size: 40px;
   line-height: 40px;
-  color: #000000;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
   max-width: 700px;
   padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 .footer-phone-link:hover {
@@ -1514,20 +1501,20 @@ html {
 }
 
 .social-list {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   width: 142px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .social-link {
+  position: relative;
+  display: block;
   min-width: 27px;
   min-height: 40px;
-  display: block;
   padding: 0 10px;
-  position: relative;
 }
 
 .social-icon {
@@ -1549,9 +1536,9 @@ html {
 }
 
 .footer-developer-logo {
-  width: 115px;
   display: flex;
   justify-content: flex-end;
+  width: 115px;
 }
 
 .footer-developer-logo-img {
@@ -1565,6 +1552,7 @@ html {
 .footer-developer-logo:active .footer-developer-logo-img {
   fill-opacity: 0.3;
 }
+
 /*Modal*/
 .modal-container-close {
   visibility: hidden;
@@ -1597,6 +1585,7 @@ html {
   text-align: left;
   text-transform: uppercase;
   color: #000000;
+
 }
 
 .modal-search {
@@ -1609,7 +1598,7 @@ html {
 
 .modal-close-button {
   position: absolute;
-  top: 88px;
+  top: 64px;
   right: 52px;
   width: 52px;
   height: 52px;
@@ -1631,6 +1620,9 @@ html {
   opacity: 0.3;
 }
 
+.modal-container-close {
+  display: none;
+}
 
 .modal-date-search-group {
   display: grid;
@@ -1644,17 +1636,12 @@ html {
 }
 
 .modal-search-input {
-  font-family: inherit;
-  font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
   box-sizing: border-box;
   width: 100%;
-  padding: 12px 60px 12px 20px;
-  text-align: left;
-  color: #000000;
+  padding: 12px 20px;
+  padding-right: 60px;
   border-radius: 4px;
-
 }
 
 .modal-input-container {
@@ -1834,16 +1821,22 @@ html {
   background-color: #68a2ca;
 }
 
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
 
 .find-button {
   font-family: inherit;
   font-size: 20px;
+  font-weight: 700;
   line-height: 24px;
   display: flex;
   justify-content: center;
   width: 577px;
   margin: 0;
   padding: 18px;
+  text-align: center;
   text-transform: uppercase;
   border: none;
   border-radius: 10px;
