@@ -177,13 +177,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.navigation-link-icon-search:active {
-  opacity: 0.4;
-}
-
-.navigation-link-icon-search:hover {
-  opacity: 0.7;
-}
 
 .navigation-link-icon-like {
   position: relative;
@@ -200,14 +193,13 @@ body {
   background: url("../icons/like.svg");
   background-repeat: no-repeat;
 }
-
-.navigation-link-icon-like:active {
-  opacity: 0.4;
+.navigation-link-icon:hover{
+  opacity: 0.6;
+}
+.navigation-link-icon:active{
+  opacity: 0.2;
 }
 
-.navigation-link-icon-like:hover {
-  opacity: 0.7;
-}
 
 .like-number {
   font-size: 10px;
